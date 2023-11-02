@@ -1,0 +1,7 @@
+f (typeof window.ethereum !== 'undefined') {
+  window.ethereum.enable().then(function (accounts) {
+    console.log('Connected to Coinbase Wallet. Your account: ', accounts[0]);
+  });
+} else {
+  console.log('Coinbase Wallet is not detected. Please install and unlock it.');
+}
